@@ -5,7 +5,7 @@
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance. (NOTE: It requires calibrated scores. See \link[CORElearn]{calibrate}
 #' from \pkg{CORElearn}).
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage PCC(test)
 #' @references Bella, A., Ferri, C., Hernández-Orallo, J., & Ramírez-Quintana,
 #' M. J. (2010). Quantification via probability estimators. In IEEE International
@@ -28,11 +28,11 @@
 #'
 #' # -- PCC requires calibrated scores. Be aware of doing this before using PCC --
 #' # -- You can make it using calibrate function from the CORElearn package --
-#' if(requireNamespace("CORElearn")){
-#'   cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
-#'   method="isoReg",assumeProbabilities=TRUE)
-#'   test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
-#' }
+#' # if(requireNamespace("CORElearn")){
+#' #   cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
+#' #   method="isoReg",assumeProbabilities=TRUE)
+#' #   test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
+#' # }
 #' PCC(test=test.scores)
 PCC <- function(test){
 

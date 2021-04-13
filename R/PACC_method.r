@@ -11,7 +11,7 @@
 #' \code{getTPRandFPRbyThreshold()}.
 #' @param thr threshold value according to the \code{tpr} and \code{fpr} were learned.
 #' Default is \code{0.5}.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @references Bella, A., Ferri, C., Hernández-Orallo, J., & Ramírez-Quintana, M. J. (2010).
 #' Quantification via probability estimators. In IEEE International Conference on Data Mining
 #' (pp. 737–742). Sidney.<doi.org/10.1109/ICDM.2010.75>.
@@ -35,11 +35,11 @@
 #'
 #' # -- PACC requires calibrated scores. Be aware of doing this before using PACC --
 #' # -- You can make it using calibrate function from the CORElearn package --
-#' if(requireNamespace("CORElearn")){
-#'    cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
-#'    method="isoReg",assumeProbabilities=TRUE)
-#'    test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
-#' }
+#' # if(requireNamespace("CORElearn")){
+#' #    cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
+#' #    method="isoReg",assumeProbabilities=TRUE)
+#' #    test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
+#' #}
 #' PACC(test = test.scores, TprFpr = TprFpr)
 PACC <- function(test, TprFpr, thr=0.5){
 
