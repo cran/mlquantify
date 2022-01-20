@@ -1,7 +1,7 @@
 Package: mlquantify
 Type: Package
 Title: Algorithms for Class Distribution Estimation
-Version: 0.1.5
+Version: 0.2.0
 Authors@R: c(
     person("Andre", "Maletzke", email = "andregustavom@gmail.com", role = c("aut","cre")),
     person("Everton", "Cherman", email = "evertoncherman@gmail.com", role = "ctb"),
@@ -28,8 +28,8 @@ Author: Andre Maletzke [aut, cre],
 RoxygenNote: 7.1.1
 BugReports: https://github.com/andregustavom/mlquantify/issues
 URL: https://github.com/andregustavom/mlquantify
-Imports: caret, randomForest, stats
+Imports: caret, randomForest, stats, FNN
 Suggests: CORElearn
-Packaged: 2021-04-10 22:40:11 UTC; andregustavom
+Packaged: 2022-01-20 12:57:28 UTC; andregustavom
 Repository: CRAN
-Date/Publication: 2021-04-13 15:20:02 UTC
+Date/Publication: 2022-01-20 14:02:41 UTC
